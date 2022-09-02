@@ -1,2 +1,3 @@
-<p>The Server {{ serverName }} is currently {{ getServerStatus() }}</p>
-<app-servers></app-servers>
+<p [ngStyle]="{backgroundColor: getColor()}"
+   [ngClass]="{online: serverStatus === 'offline'}"
+> {{ serverName }} is currently {{ getServerStatus() }}</p>
